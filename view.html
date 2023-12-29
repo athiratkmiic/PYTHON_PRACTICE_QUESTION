@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>VIEW ALL</title>
+   <link rel="stylesheet"  href="../static/cand.css">
+
+</head><body background="../static/A22.jpg" >
+</head>
+<body>
+    <h1> PLAYERS LIST </h1>
+    <table border = "1px">
+        <thead>
+            <tr>
+                <th>Cand ID </th>
+                <th>Name </th>
+                <th>Mail ID </th>
+                <th>Username </th>
+                <th>Password </th>
+            </tr>
+        </thead>  
+        <tbody>
+            {% for i in sqldata %}
+            <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+                <td>{{i[4]}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+         
+    </table>
+</body>
+</html>
